@@ -16,7 +16,8 @@ def find_readme():
                 if os.path.exists(os.path.join(path, filename)):
                     path = os.path.join(path, filename)
                     if os.path.isfile(path):
-                        return os.path.abspath(path)
+                        if confirm_path(path):
+                            return os.path.abspath(path)
 
             for item in os.listdir(os.path.normpath(os.path.expanduser(base))):
                 path = os.path.normpath(os.path.expanduser(os.path.join(base, item)))
@@ -25,7 +26,8 @@ def find_readme():
                         if os.path.exists(os.path.join(path, filename)):
                             path = os.path.join(path, filename)
                             if os.path.isfile(path):
-                                return os.path.abspath(path)
+                                if confirm_path(path):
+                                    return os.path.abspath(path)
     except FileNotFoundError:
         pass
     except Exception as e:
@@ -34,7 +36,7 @@ def find_readme():
 
 
 def confirm_path(path):
-    return path and os.path.isfile(path) and os.path.basename(path).upper().startswith("README")
+    return path and os.path.isfile(path) and os.path.basename(str(path)).upper().startswith("README") and not ignore_readme(path)
 
 
 def strip_html(text: str) -> str:
@@ -55,6 +57,18 @@ def is_valid_username(name: str) -> bool:
     if any(x in low for x in ("password", "authorized", "services", ":")):
         return False
     return re.fullmatch(r"[a-zA-Z0-9._-]+", name) is not None
+
+
+def ignore_readme(path):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            first_line = f.readline().strip()
+            #print(first_line)
+            # Return False if 'IGNORE' is in the first line
+            return "<!-- IGNORE -->" == first_line
+    except FileNotFoundError:
+        # File doesn't exist, treat as not ignored
+        return True
 
 
 def parse_readme(path: str):

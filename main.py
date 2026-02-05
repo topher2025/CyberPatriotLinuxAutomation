@@ -1,5 +1,7 @@
 import argparse
-from functions import readme
+from utils import readme
+from modules import user_mgmt
+from utils.readme import find_readme
 
 
 #########################################
@@ -154,10 +156,4 @@ if __name__ == '__main__':
         pass
 
 
-
-    print("Parsed arguments:")
-    for key, value in vars(args).items():
-        print(f"{key}: {value}")
-
-    print(f"\nr_status: {r_status}")
 

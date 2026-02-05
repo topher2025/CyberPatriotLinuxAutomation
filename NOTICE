@@ -1,0 +1,26 @@
+Linux CyberPatriot Automation
+Copyright 2026 Christopher Lewis
+
+This product includes software developed by Christopher Lewis.
+
+================================================================================
+                               NOTICE
+================================================================================
+
+This project is licensed under the Apache License, Version 2.0.
+
+The project was independently developed as a Linux automation tool for
+CyberPatriot training and competition use.
+
+The general concept was inspired by a Windows-based CyberPatriot automation
+project written in C#. No source code, assets, or proprietary materials from
+that project were used in this repository.
+
+================================================================================
+                              ATTRIBUTION
+================================================================================
+
+Conceptual inspiration:
+- CyberPatriot Automation Tool (Windows / C#)
+  Author: Maxwell McCormick
+  Repository: https://github.com/NotMaxwell/CyberPatriotAutomation
