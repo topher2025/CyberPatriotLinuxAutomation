@@ -6,8 +6,8 @@
 [![Author](https://img.shields.io/badge/Author-Christopher%20Lewis-blue.svg)](https://github.com/topher2025)
 
 
-**Author:** Christopher Lewis
-**Copyright:** &copy; 2026 Christopher Lewis
+**Author:** Christopher Lewis  
+**Copyright:** &copy; 2026 Christopher Lewis  
 **License:** Apache License 2.0
 
 A Linux automation and system-hardening toolkit designed to assist **CyberPatriot**
