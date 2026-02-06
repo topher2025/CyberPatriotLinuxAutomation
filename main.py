@@ -1,7 +1,6 @@
 import argparse
 from utils import readme
-from modules import user_mgmt
-from utils.readme import find_readme
+from modules.user_mgmt import main
 
 
 #########################################

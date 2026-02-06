@@ -100,7 +100,7 @@ CyberPatriotLinuxToolkit/
 ├── LICENSE                 # Apache 2.0 License
 ├── NOTICE                  # Attribution & trademark notice
 ├── CREDITS.md              # Credits and insparations
-├── CONTRIBUTIONS.md        # Contribution guidelines
+├── CONTRIBUTING.md        # Contribution guidelines
 ├── setup.py                # Initial setup
 ├── main.py                 # Entry point
 ├── data/                   # Data and config fils
@@ -114,6 +114,7 @@ CyberPatriotLinuxToolkit/
 │   └── media_scan/         # Prohibited media scanning
 ├── utils/                  # Shared helpers
 │   ├── readme.py           # Supports README opperations
+│   ├── scripts.py          # Supports shell script operations
 └── tests/                  # Sample READMEs
 ```
 
